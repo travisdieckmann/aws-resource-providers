@@ -11,12 +11,12 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: dist/handlers.entrypoint
-      Runtime: nodejs20.x
+      Runtime: nodejs18.x
       CodeUri: ./
 
   TestEntrypoint:
     Type: AWS::Serverless::Function
     Properties:
       Handler: dist/handlers.testEntrypoint
-      Runtime: nodejs20.x
+      Runtime: nodejs18.x
       CodeUri: ./

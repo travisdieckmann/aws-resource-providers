@@ -1,6 +1,6 @@
 {
     "name": "community-codecommit-approvalruletemplate",
-    "version": "1.0.0",
+    "version": "0.9.0",
     "description": "AWS custom resource provider named Community::CodeCommit::ApprovalRuleTemplate.",
     "private": true,
     "main": "dist/handlers.js",

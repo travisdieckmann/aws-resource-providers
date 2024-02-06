@@ -2,7 +2,7 @@
     "artifact_type": "RESOURCE",
     "typeName": "Community::DirectConnect::Gateway",
     "language": "typescript",
-    "runtime": "nodejs20.x",
+    "runtime": "nodejs18.x",
     "entrypoint": "dist/handlers.entrypoint",
     "testEntrypoint": "dist/handlers.testEntrypoint",
     "settings": {

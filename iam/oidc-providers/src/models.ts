@@ -12,40 +12,24 @@ export class ResourceModel extends BaseModel {
     protected readonly IDENTIFIER_KEY_ARN: string = '/properties/Arn';
 
     @Expose({ name: 'Arn' })
-    @Transform(
-        (value: any, obj: any) =>
-            transformValue(String, 'arn', value, obj, []),
-        {
-            toClassOnly: true,
-        }
-    )
+    @Transform((value: any, obj: any) => transformValue(String, 'arn', value, obj, []), {
+        toClassOnly: true,
+    })
     arn?: Optional<string>;
     @Expose({ name: 'Url' })
-    @Transform(
-        (value: any, obj: any) =>
-            transformValue(String, 'url', value, obj, []),
-        {
-            toClassOnly: true,
-        }
-    )
+    @Transform((value: any, obj: any) => transformValue(String, 'url', value, obj, []), {
+        toClassOnly: true,
+    })
     url?: Optional<string>;
     @Expose({ name: 'ThumbprintList' })
-    @Transform(
-        (value: any, obj: any) =>
-            transformValue(String, 'thumbprintList', value, obj, [Array]),
-        {
-            toClassOnly: true,
-        }
-    )
+    @Transform((value: any, obj: any) => transformValue(String, 'thumbprintList', value, obj, [Array]), {
+        toClassOnly: true,
+    })
     thumbprintList?: Optional<Array<string>>;
     @Expose({ name: 'ClientIdList' })
-    @Transform(
-        (value: any, obj: any) =>
-            transformValue(String, 'clientIdList', value, obj, [Array]),
-        {
-            toClassOnly: true,
-        }
-    )
+    @Transform((value: any, obj: any) => transformValue(String, 'clientIdList', value, obj, [Array]), {
+        toClassOnly: true,
+    })
     clientIdList?: Optional<Array<string>>;
 
     @Exclude()
@@ -66,4 +50,3 @@ export class ResourceModel extends BaseModel {
         return identifiers.length === 0 ? null : identifiers;
     }
 }
-

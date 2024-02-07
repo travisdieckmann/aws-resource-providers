@@ -1,5 +1,5 @@
 // This is a generated file. Modifications will be overwritten.
-import { BaseModel, Dict, integer, Integer, Optional, transformValue } from 'cfn-rpdk';
+import { BaseModel, Dict, integer, Integer, Optional, transformValue } from '@amazon-web-services-cloudformation/cloudformation-cli-typescript-lib';
 import { Exclude, Expose, Type, Transform } from 'class-transformer';
 
 export class ResourceModel extends BaseModel {
@@ -12,31 +12,19 @@ export class ResourceModel extends BaseModel {
     protected readonly IDENTIFIER_KEY_ARN: string = '/properties/Arn';
 
     @Expose({ name: 'AccountId' })
-    @Transform(
-        (value: any, obj: any) =>
-            transformValue(String, 'accountId', value, obj, []),
-        {
-            toClassOnly: true,
-        }
-    )
+    @Transform((value: any, obj: any) => transformValue(String, 'accountId', value, obj, []), {
+        toClassOnly: true,
+    })
     accountId?: Optional<string>;
     @Expose({ name: 'ServicePrincipal' })
-    @Transform(
-        (value: any, obj: any) =>
-            transformValue(String, 'servicePrincipal', value, obj, []),
-        {
-            toClassOnly: true,
-        }
-    )
+    @Transform((value: any, obj: any) => transformValue(String, 'servicePrincipal', value, obj, []), {
+        toClassOnly: true,
+    })
     servicePrincipal?: Optional<string>;
     @Expose({ name: 'Arn' })
-    @Transform(
-        (value: any, obj: any) =>
-            transformValue(String, 'arn', value, obj, []),
-        {
-            toClassOnly: true,
-        }
-    )
+    @Transform((value: any, obj: any) => transformValue(String, 'arn', value, obj, []), {
+        toClassOnly: true,
+    })
     arn?: Optional<string>;
 
     @Exclude()
@@ -57,4 +45,3 @@ export class ResourceModel extends BaseModel {
         return identifiers.length === 0 ? null : identifiers;
     }
 }
-
